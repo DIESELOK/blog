@@ -1,40 +1,16 @@
 /*
-Theme Name: Classic
+Theme Name: Blog
 Author: DIESEL
 Author URI: http://dieselok.github.com/
 Version: 1.0
 */
 
-@font-face {
-  font-family: NexaBold;
-  font-style: normal;
-  font-weight: normal;
-  src: local('NexaBold'), url('fonts/NexaBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: ProximaNova;
-  font-style: normal;
-  font-weight: normal;
-  src: local('ProximaNova'), url('fonts/proximanova-regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: ProximaNova;
-  font-style: normal;
-  font-weight: 600;
-  src: local('ProximaNova'), url('fonts/proximanova-semibold.ttf') format('truetype');
-}
-@font-face {
-  font-family: ProximaNova;
-  font-style: normal;
-  font-weight: 800;
-  src: local('ProximaNova'), url('fonts/proximanova-extrabold.ttf') format('truetype');
-}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
 @import 'compass';
 @import "grids";
 @import "reset";
 @import "layout/header";
-@import "site-parts/article-section";
 @import "layout/footer";
 
 @include border-box-sizing();
