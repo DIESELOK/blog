@@ -1,0 +1,62 @@
+header{
+  min-height: 80px;
+  padding: 30px 0;
+  background-color: #111;
+  .logo{
+    float:left;
+    transition: 0.5s;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  .nav-header{
+    float: right;
+    margin-top: 13px;
+    li{
+      display:inline-block;
+      margin-left: 30px;
+      &:first-of-type{
+        margin-left: 0px;
+      }
+      a{
+        font-family: NexaBold;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #ccc;
+        transition: 0.5s;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+    li.current-menu-item{
+      a{
+        color: white;
+      }
+    }
+  }
+}
+.category-items{
+  .container{
+    padding: 0 90px;
+  }
+  display:block;
+  height: 62px;
+  border: 1px solid #ccc;
+  opacity: 0.84;
+  background-color: #f7f7f7;
+  li{
+    float: right;
+    display:inline-block;
+    margin-left:30px;
+    padding: 20px 0;
+    a{
+      color: #555;
+      font-family: NexaBold;
+    }
+  }
+  li.current-cat{
+    border-bottom: 1px solid black;
+  }
+}

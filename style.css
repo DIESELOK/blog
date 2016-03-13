@@ -1,0 +1,563 @@
+/*
+Theme Name: Classic
+Author: DIESEL
+Author URI: http://dieselok.github.com/
+Version: 1.0
+*/
+@font-face {
+  font-family: NexaBold;
+  font-style: normal;
+  font-weight: normal;
+  src: local("NexaBold"), url("fonts/NexaBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: normal;
+  src: local("ProximaNova"), url("fonts/proximanova-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 600;
+  src: local("ProximaNova"), url("fonts/proximanova-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 800;
+  src: local("ProximaNova"), url("fonts/proximanova-extrabold.ttf") format("truetype");
+}
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/* line 4, sass/_reset.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 5, sass/_reset.scss */
+body {
+  padding: 0;
+  margin: 0;
+  font: 16px 'ProximaNova', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* line 6, sass/_reset.scss */
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
+}
+
+/* line 12, sass/_reset.scss */
+select, input, textarea {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* line 13, sass/_reset.scss */
+textarea {
+  vertical-align: top;
+}
+
+/* line 14, sass/_reset.scss */
+:focus {
+  outline: none;
+}
+
+/* line 15, sass/_reset.scss */
+input[type=submit] {
+  cursor: pointer;
+}
+
+/* line 16, sass/_reset.scss */
+img, fieldset {
+  border: 0;
+}
+
+/* line 17, sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 18, sass/_reset.scss */
+a:link, a:visited {
+  font: 16px 'ProximaNova', sans-serif;
+  color: #4C8BBF;
+  text-decoration: none;
+}
+
+/* line 19, sass/_reset.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 1, sass/layout/_header.scss */
+header {
+  min-height: 80px;
+  padding: 30px 0;
+  background-color: #111;
+}
+/* line 5, sass/layout/_header.scss */
+header .logo {
+  float: left;
+  transition: 0.5s;
+}
+/* line 8, sass/layout/_header.scss */
+header .logo:hover {
+  opacity: 0.7;
+}
+/* line 12, sass/layout/_header.scss */
+header .nav-header {
+  float: right;
+  margin-top: 13px;
+}
+/* line 15, sass/layout/_header.scss */
+header .nav-header li {
+  display: inline-block;
+  margin-left: 30px;
+}
+/* line 18, sass/layout/_header.scss */
+header .nav-header li:first-of-type {
+  margin-left: 0px;
+}
+/* line 21, sass/layout/_header.scss */
+header .nav-header li a {
+  font-family: NexaBold;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ccc;
+  transition: 0.5s;
+}
+/* line 28, sass/layout/_header.scss */
+header .nav-header li a:hover {
+  color: white;
+}
+/* line 34, sass/layout/_header.scss */
+header .nav-header li.current-menu-item a {
+  color: white;
+}
+
+/* line 40, sass/layout/_header.scss */
+.category-items {
+  display: block;
+  height: 62px;
+  border: 1px solid #ccc;
+  opacity: 0.84;
+  background-color: #f7f7f7;
+}
+/* line 41, sass/layout/_header.scss */
+.category-items .container {
+  padding: 0 90px;
+}
+/* line 49, sass/layout/_header.scss */
+.category-items li {
+  float: right;
+  display: inline-block;
+  margin-left: 30px;
+  padding: 20px 0;
+}
+/* line 54, sass/layout/_header.scss */
+.category-items li a {
+  color: #555;
+  font-family: NexaBold;
+}
+/* line 59, sass/layout/_header.scss */
+.category-items li.current-cat {
+  border-bottom: 1px solid black;
+}
+
+/* line 2, sass/site-parts/_article-section.scss */
+.article-section .post {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 6, sass/site-parts/_article-section.scss */
+.article-section .post h2 {
+  max-width: 711px;
+  margin: 0 auto 10px;
+  text-align: center;
+  line-height: 50px;
+}
+/* line 11, sass/site-parts/_article-section.scss */
+.article-section .post h2 a {
+  font-family: NexaBold;
+  font-size: 48px;
+  font-weight: 400;
+  color: #111;
+  transition: 0.5s;
+}
+/* line 17, sass/site-parts/_article-section.scss */
+.article-section .post h2 a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+/* line 23, sass/site-parts/_article-section.scss */
+.article-section .post .post-info {
+  margin: 30px 0 45px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+/* line 30, sass/site-parts/_article-section.scss */
+.article-section .post .thumbnail {
+  margin-bottom: 45px;
+  text-align: center;
+}
+/* line 35, sass/site-parts/_article-section.scss */
+.article-section .post .excerpt-link {
+  position: relative;
+  display: block;
+  margin: 20px auto 0;
+  color: #111;
+  font-weight: 600;
+}
+/* line 41, sass/site-parts/_article-section.scss */
+.article-section .post .excerpt-link .fa {
+  font-size: 25px;
+}
+/* line 46, sass/site-parts/_article-section.scss */
+.article-section .pagination {
+  margin: 80px 0 0;
+  text-align: center;
+}
+/* line 50, sass/site-parts/_article-section.scss */
+.article-section .pagination .prev,
+.article-section .pagination .next {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 1px;
+  text-align: center;
+  padding-top: 6px;
+}
+/* line 62, sass/site-parts/_article-section.scss */
+.article-section .pagination .prev:hover,
+.article-section .pagination .next:hover {
+  color: #87b672;
+}
+/* line 67, sass/site-parts/_article-section.scss */
+.article-section .pagination .prev {
+  margin: 0 15px 0 0;
+}
+/* line 71, sass/site-parts/_article-section.scss */
+.article-section .pagination .next {
+  margin: 0 0 0 15px;
+}
+/* line 75, sass/site-parts/_article-section.scss */
+.article-section .page-numbers {
+  margin: 0 10px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+/* line 81, sass/site-parts/_article-section.scss */
+.article-section .pagination .current {
+  color: #87b672;
+}
+
+/* line 88, sass/site-parts/_article-section.scss */
+section.post-content {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 92, sass/site-parts/_article-section.scss */
+.post-content img {
+  display: block;
+  margin: 30px auto;
+}
+
+/* line 97, sass/site-parts/_article-section.scss */
+.section-header {
+  margin: 50px 0;
+  font-family: 'NexaBold', sans-serif;
+  font-size: 2.125em;
+  font-weight: 600;
+  line-height: 1.47;
+}
+
+/* line 105, sass/site-parts/_article-section.scss */
+.comment-body {
+  margin-bottom: 50px;
+}
+
+/* line 109, sass/site-parts/_article-section.scss */
+.comment-author:before, .comment-author:after {
+  content: '';
+  display: table;
+}
+
+/* line 114, sass/site-parts/_article-section.scss */
+.comment-author:after {
+  clear: both;
+}
+
+/* line 118, sass/site-parts/_article-section.scss */
+.comment-author .avatar {
+  display: block;
+  border-radius: 50%;
+  float: left;
+  margin-right: 24px;
+}
+
+/* line 125, sass/site-parts/_article-section.scss */
+.comment-author .fn {
+  margin: 14px 0 19px;
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2.08;
+}
+
+/* line 133, sass/site-parts/_article-section.scss */
+.comment-author a {
+  display: block;
+}
+
+/* line 137, sass/site-parts/_article-section.scss */
+.comment-body p,
+.comment-body .reply {
+  margin-left: 95px;
+}
+
+/* line 142, sass/site-parts/_article-section.scss */
+.comment .children {
+  padding-left: 95px;
+}
+
+/* Comment Form */
+/* line 147, sass/site-parts/_article-section.scss */
+.comment-form label {
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 2.78;
+}
+
+/* line 153, sass/site-parts/_article-section.scss */
+.comment-form input, textarea {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 1.125em;
+  padding: 5px 10px;
+}
+
+/* line 162, sass/site-parts/_article-section.scss */
+.comment-form input {
+  width: 285px;
+  height: 36px;
+}
+
+/* line 167, sass/site-parts/_article-section.scss */
+.comment-form textarea {
+  width: 285px;
+  height: 165px;
+}
+
+/* line 172, sass/site-parts/_article-section.scss */
+.comment-form .submit {
+  width: 100px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* line 178, sass/site-parts/_article-section.scss */
+.comment-form .submit:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 640px) {
+  /* line 183, sass/site-parts/_article-section.scss */
+  .comment-form textarea {
+    width: 600px;
+  }
+}
+/* About Page */
+/* line 189, sass/site-parts/_article-section.scss */
+.single-page-container {
+  padding-bottom: 30px;
+}
+
+/* line 193, sass/site-parts/_article-section.scss */
+.our-team {
+  padding-top: 35px;
+  border-top: 1px solid #ccc;
+}
+
+/* line 198, sass/site-parts/_article-section.scss */
+.our-team .single-post-header {
+  margin: 24px auto 0;
+  font-size: 48px;
+  text-align: center;
+}
+
+/* line 204, sass/site-parts/_article-section.scss */
+.team-container {
+  text-align: center;
+}
+
+/* line 208, sass/site-parts/_article-section.scss */
+.member-item {
+  display: inline-block;
+  width: 298px;
+  padding: 60px 20px 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* line 216, sass/site-parts/_article-section.scss */
+.member-item-photo {
+  display: block;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 223, sass/site-parts/_article-section.scss */
+.member-item-photo img {
+  border-radius: 50%;
+}
+
+/* line 228, sass/site-parts/_article-section.scss */
+.member-item-header {
+  margin: 31px 0 0;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+/* line 234, sass/site-parts/_article-section.scss */
+.member-item p {
+  padding: 0 19px;
+}
+
+/* line 238, sass/site-parts/_article-section.scss */
+.member-item-position {
+  margin: 0 0 20px 0;
+  color: #555;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* line 1, sass/layout/_footer.scss */
+footer {
+  margin: 75px 0 0;
+  padding: 10px 0;
+}
+/* line 2, sass/layout/_footer.scss */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 8, sass/layout/_footer.scss */
+footer .nav-footer {
+  padding-top: 10px;
+}
+/* line 10, sass/layout/_footer.scss */
+footer .nav-footer li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 13, sass/layout/_footer.scss */
+footer .nav-footer li:last-of-type {
+  margin-right: 0px;
+}
+/* line 16, sass/layout/_footer.scss */
+footer .nav-footer li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  transition: 0.5s;
+}
+/* line 21, sass/layout/_footer.scss */
+footer .nav-footer li a:hover {
+  color: black;
+}
+/* line 27, sass/layout/_footer.scss */
+footer .nav-footer li.current-menu-item a {
+  color: #ccc;
+}
+/* line 32, sass/layout/_footer.scss */
+footer .social-links-menu {
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 35, sass/layout/_footer.scss */
+footer .social-links-menu li {
+  display: inline-block;
+  margin-left: 5px;
+}
+/* line 38, sass/layout/_footer.scss */
+footer .social-links-menu li:last-of-type {
+  margin-left: 0px;
+}
+/* line 41, sass/layout/_footer.scss */
+footer .social-links-menu li a {
+  width: 40px;
+  display: inline-block;
+  height: 40px;
+  border-radius: 50%;
+  padding: 11px;
+  background-color: #111;
+  color: #fff;
+  transition: 0.5s;
+}
+/* line 50, sass/layout/_footer.scss */
+footer .social-links-menu li a:hover {
+  color: #111;
+  background-color: #fff;
+}
+/* line 57, sass/layout/_footer.scss */
+footer .copyright {
+  padding-top: 10px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* line 21, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.9/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 41, sass/style.scss */
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 46, sass/style.scss */
+.clear::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 53, sass/style.scss */
+img {
+  max-width: 100%;
+}

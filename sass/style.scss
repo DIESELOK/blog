@@ -1,0 +1,55 @@
+/*
+Theme Name: Classic
+Author: DIESEL
+Author URI: http://dieselok.github.com/
+Version: 1.0
+*/
+
+@font-face {
+  font-family: NexaBold;
+  font-style: normal;
+  font-weight: normal;
+  src: local('NexaBold'), url('fonts/NexaBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: normal;
+  src: local('ProximaNova'), url('fonts/proximanova-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 600;
+  src: local('ProximaNova'), url('fonts/proximanova-semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 800;
+  src: local('ProximaNova'), url('fonts/proximanova-extrabold.ttf') format('truetype');
+}
+
+@import 'compass';
+@import "grids";
+@import "reset";
+@import "layout/header";
+@import "site-parts/article-section";
+@import "layout/footer";
+
+@include border-box-sizing();
+.container{
+  @include container();
+  padding:0 10px;
+  overflow: hidden;
+}
+.clear::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+img{
+  max-width:100%;
+}
