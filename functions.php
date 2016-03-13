@@ -94,7 +94,7 @@ function blog_customize_css()
 {
     ?>
     <style type="text/css">
-        .header-nav { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
+        .header-nav, .excerpt-link { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
         .main-content .slider .description-block {border-top-color:<?php echo get_theme_mod('theme_color', '#000000'); ?>;}
     </style>
     <?php
@@ -118,9 +118,9 @@ function slider_register() {
 }
 
 // add pagination
-function classic_pagination(){
+function blog_pagination(){
     $pagination = get_the_posts_pagination( array(
-        'mid_size' => 2,
+        'mid_size' => 1,
         'prev_text' => __( '<span class="fa fa-chevron-left"></span>', 'textdomain' ),
         'next_text' => __( '<span class="fa fa-chevron-right"></span>', 'textdomain' ),
         'screen_reader_text' => __( ' ', 'textdomain' ),

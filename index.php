@@ -23,24 +23,38 @@
                 </li>
         </ul>
     </section>
+
     <section class="article-section clear">
+        <h2>Latest Blog Post</h2>
             <?php
             if (have_posts()):
                 while (have_posts()) : the_post(); ?>
 
                     <article class="post">
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <p class="post-info">Posted on <?php the_time('F j, Y'); ?></php></p>
-                        <div class="thumbnail">
-                            <?php the_post_thumbnail('small-thumbnails'); ?>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <ul class="meta-info">
+                            <li>
+                                <span class="fa fa-comment"></span>
+                                <a href="<?php the_permalink() ?>#comments">
+                                    <?php comments_number('No Comments yet', '1  comment', '% comments');
+                                    ?>
+                                </a></li>
+                            <li><span class="fa fa-folder-open"></span><?php echo the_category(); ?></li>
+                        </ul>
+
+                        <div class="date-wrap">
+                            <time>
+                                <p class="post-date"><?php the_time('j'); ?></p>
+                                <p class="post-month"><?php the_time('F'); ?></p>
+                            </time>
                         </div>
                         <?php the_excerpt(); ?>
-                        <a class="excerpt-link" href="<?php the_permalink(); ?>"><span class="fa fa-arrow-circle-o-right"></span>         Read More</a>
+                        <a class="excerpt-link" href="<?php the_permalink(); ?>">Continue Reading<span class="fa fa-angle-right"></span></a>
                     </article>
 
                 <?php endwhile; ?>
 
-                <?php echo classic_pagination(); ?>
+                <?php echo blog_pagination(); ?>
 
             <?php else:
                 echo '<p>No content found</p>'; ?>
