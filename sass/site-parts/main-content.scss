@@ -3,6 +3,8 @@
   width: 705px;
   margin-top: 10px;
   .slider{
+    max-height: 341px;
+    overflow: hidden;
     background: url("img/rectangle-4-copy.png") repeat;
     background-size: cover;
     padding: 5px;
@@ -24,6 +26,35 @@
         font-weight: 300;
         line-height: 14px;
         color: #ececec;
+      }
+    }
+
+    //slider controls
+    .bx-controls-direction{
+      display: none;
+    }
+    .bx-controls{
+      position: absolute;
+      top: 22%;
+      right: 38%;
+      .bx-pager-item {
+        a {
+          display: inline-block;
+          width: 23px;
+          height: 23px;
+          margin-bottom: 3px;
+          background-color: #222;
+          opacity: 0.42;
+          color: #ffd500;
+          font-family: Arial;
+          font-size: 13px;
+          text-align: center;
+          line-height: 2;
+        }
+        a.active{
+          color: #ffd500;
+          opacity: 1;
+        }
       }
     }
   }

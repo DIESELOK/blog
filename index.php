@@ -3,21 +3,25 @@
 <div class="container clear">
 <main class="main-content clear">
     <section class="slider">
-            <?php
-            $args = array( 'post_type' => 'slider' );
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-                ?>
-                <article class="slider-item">
-                    <figure class="slider-item-photo"><?php the_post_thumbnail('banner-thumbnails');?></figure>
-                    <div class="description-block">
-                        <h3 class="slider-item-header"><?php the_title();?></h3>
-                        <?php the_content(); ?>
-                    </div>
-                </article>
+        <ul class="bxslider">
+
                 <?php
-            endwhile;
-            ?>
+                $args = array( 'post_type' => 'slider' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post();
+                    ?>
+                <li>
+                    <article class="slider-item">
+                        <figure class="slider-item-photo"><?php the_post_thumbnail('banner-thumbnails');?></figure>
+                        <div class="description-block">
+                            <h3 class="slider-item-header"><?php the_title();?></h3>
+                            <?php the_content(); ?>
+                        </div>
+                    </article>
+
+                    <?php endwhile; ?>
+                </li>
+        </ul>
     </section>
     <section class="article-section clear">
             <?php

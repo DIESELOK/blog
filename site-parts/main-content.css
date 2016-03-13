@@ -6,31 +6,62 @@
 }
 /* line 5, ../sass/site-parts/main-content.scss */
 .main-content .slider {
+  max-height: 341px;
+  overflow: hidden;
   background: url("img/rectangle-4-copy.png") repeat;
   background-size: cover;
   padding: 5px;
 }
-/* line 9, ../sass/site-parts/main-content.scss */
+/* line 11, ../sass/site-parts/main-content.scss */
 .main-content .slider figure {
   margin: 0;
   line-height: 0;
 }
-/* line 13, ../sass/site-parts/main-content.scss */
+/* line 15, ../sass/site-parts/main-content.scss */
 .main-content .slider .description-block {
   border-top: 5px solid;
   padding: 15px;
   background: #222;
 }
-/* line 17, ../sass/site-parts/main-content.scss */
+/* line 19, ../sass/site-parts/main-content.scss */
 .main-content .slider .description-block h3 {
   font-size: 22px;
   color: #ececec;
   letter-spacing: 1.1px;
 }
-/* line 22, ../sass/site-parts/main-content.scss */
+/* line 24, ../sass/site-parts/main-content.scss */
 .main-content .slider .description-block p {
   font-size: 15px;
   font-weight: 300;
   line-height: 14px;
   color: #ececec;
+}
+/* line 33, ../sass/site-parts/main-content.scss */
+.main-content .slider .bx-controls-direction {
+  display: none;
+}
+/* line 36, ../sass/site-parts/main-content.scss */
+.main-content .slider .bx-controls {
+  position: absolute;
+  top: 22%;
+  right: 38%;
+}
+/* line 41, ../sass/site-parts/main-content.scss */
+.main-content .slider .bx-controls .bx-pager-item a {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin-bottom: 3px;
+  background-color: #222;
+  opacity: 0.42;
+  color: #ffd500;
+  font-family: Arial;
+  font-size: 13px;
+  text-align: center;
+  line-height: 2;
+}
+/* line 54, ../sass/site-parts/main-content.scss */
+.main-content .slider .bx-controls .bx-pager-item a.active {
+  color: #ffd500;
+  opacity: 1;
 }
