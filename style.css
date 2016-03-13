@@ -142,6 +142,43 @@ header .header-nav li a:hover {
   background-color: #fff;
 }
 
+/* line 1, sass/site-parts/main-content.scss */
+.main-content {
+  float: left;
+  width: 705px;
+  margin-top: 10px;
+}
+/* line 5, sass/site-parts/main-content.scss */
+.main-content .slider {
+  background: url("img/rectangle-4-copy.png") repeat;
+  background-size: cover;
+  padding: 5px;
+}
+/* line 9, sass/site-parts/main-content.scss */
+.main-content .slider figure {
+  margin: 0;
+  line-height: 0;
+}
+/* line 13, sass/site-parts/main-content.scss */
+.main-content .slider .description-block {
+  border-top: 5px solid;
+  padding: 15px;
+  background: #222;
+}
+/* line 17, sass/site-parts/main-content.scss */
+.main-content .slider .description-block h3 {
+  font-size: 22px;
+  color: #ececec;
+  letter-spacing: 1.1px;
+}
+/* line 22, sass/site-parts/main-content.scss */
+.main-content .slider .description-block p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #ececec;
+}
+
 /* line 1, sass/layout/_footer.scss */
 footer {
   clear: both;
@@ -201,7 +238,7 @@ footer .social-links-menu li a .fa {
   box-sizing: border-box;
 }
 
-/* line 17, sass/style.scss */
+/* line 18, sass/style.scss */
 .container {
   max-width: 1045px;
   margin-left: auto;
@@ -216,7 +253,7 @@ footer .social-links-menu li a .fa {
   clear: both;
 }
 
-/* line 22, sass/style.scss */
+/* line 23, sass/style.scss */
 .clear::after {
   content: "";
   display: block;
@@ -225,7 +262,7 @@ footer .social-links-menu li a .fa {
   visibility: hidden;
 }
 
-/* line 29, sass/style.scss */
+/* line 30, sass/style.scss */
 img {
   max-width: 100%;
 }

@@ -11,6 +11,7 @@ Version: 1.0
 @import "grids";
 @import "reset";
 @import "layout/header";
+@import "site-parts/main-content";
 @import "layout/footer";
 
 @include border-box-sizing();

@@ -4,6 +4,14 @@ function theme_resources(){
 }
 add_action('wp_enqueue_scripts', 'theme_resources');
 
+//add featured image support
+function classic_setup(){
+    add_theme_support('post-thumbnails');
+    add_image_size('small-thumbnails', 328, 228, true);
+    add_image_size('banner-thumbnails', 692, 250, true);
+}
+add_action('after_setup_theme', 'classic_setup');
+
 //navigation menu
 register_nav_menus(array(
     'primary' => __( 'Header menu' ),
@@ -87,21 +95,29 @@ function blog_customize_css()
     ?>
     <style type="text/css">
         .header-nav { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
+        .main-content .slider .description-block {border-top-color:<?php echo get_theme_mod('theme_color', '#000000'); ?>;}
     </style>
     <?php
 }
 add_action( 'wp_head', 'blog_customize_css');
 
-//add featured image support
-function classic_setup(){
-    add_theme_support('post-thumbnails');
-    add_image_size('small-thumbnails', 328, 228, true);
-    add_image_size('banner-thumbnails', 960, 360, true);
+//add slider post type
+add_action('init', 'slider_register');
+function slider_register() {
+    $args = array(
+        'label' => __('Slider'),
+        'singular_label' => __('Slider Item'),
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => true,
+        'supports' => array('title', 'custom-fields', 'editor', 'thumbnail')
+    );
+    register_post_type( 'slider' , $args );
 }
-add_action('after_setup_theme', 'classic_setup');
 
 // add pagination
-
 function classic_pagination(){
     $pagination = get_the_posts_pagination( array(
         'mid_size' => 2,

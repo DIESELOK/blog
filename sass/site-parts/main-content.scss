@@ -1,0 +1,30 @@
+.main-content{
+  float: left;
+  width: 705px;
+  margin-top: 10px;
+  .slider{
+    background: url("img/rectangle-4-copy.png") repeat;
+    background-size: cover;
+    padding: 5px;
+    figure{
+      margin: 0;
+      line-height: 0;
+    }
+    .description-block{
+      border-top:5px solid;
+      padding: 15px;
+      background: #222;
+      h3{
+        font-size: 22px;
+        color: #ececec;
+        letter-spacing: 1.1px;
+      }
+      p{
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 14px;
+        color: #ececec;
+      }
+    }
+  }
+}
