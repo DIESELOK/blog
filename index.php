@@ -2,6 +2,12 @@
 
 <div class="container clear">
 <main class="main-content clear">
+    <?php
+    // the query to set the posts per page to 3
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array('posts_per_page' => 4, 'paged' => $paged );
+    query_posts($args); ?>
+
     <section class="slider">
         <ul class="bxslider">
 
@@ -61,6 +67,9 @@
             <?php endif; ?>
     </section>
 </main>
+
+    <?php get_sidebar(); ?>
+
 </div>
 
 <?php get_footer(); ?>

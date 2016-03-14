@@ -12,6 +12,7 @@ Version: 1.0
 @import "reset";
 @import "layout/header";
 @import "site-parts/main-content";
+@import "site-parts/main-sidebar";
 @import "layout/footer";
 
 @include border-box-sizing();

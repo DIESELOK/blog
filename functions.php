@@ -94,7 +94,7 @@ function blog_customize_css()
 {
     ?>
     <style type="text/css">
-        .header-nav, .excerpt-link { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
+        .header-nav, .excerpt-link, .widget_text button { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
         .main-content .slider .description-block {border-top-color:<?php echo get_theme_mod('theme_color', '#000000'); ?>;}
     </style>
     <?php
@@ -127,3 +127,16 @@ function blog_pagination(){
     ) );
     echo $pagination;
 }
+
+// Add Widget Areas
+function ourWidgetsInit() {
+    register_sidebar( array(
+        'name' => 'Sidebar',
+        'id' => 'main_sidebar',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>'
+    ));
+}
+add_action('widgets_init', 'ourWidgetsInit');

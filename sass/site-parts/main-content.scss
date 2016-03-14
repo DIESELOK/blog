@@ -169,4 +169,31 @@
       }
     }
   }
+  //pagination
+  .navigation{
+    overflow: hidden;
+    margin-bottom: 35px;
+    h2{
+      display:none;
+    }
+    .nav-links {
+      float:right;
+      .page-numbers {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        opacity: 0.84;
+        background-color: #e2e2e2;
+        text-align: center;
+        color: #222;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 24px;
+      }
+      .current{
+        background-color: #222;
+        color: white;
+      }
+    }
+  }
 }

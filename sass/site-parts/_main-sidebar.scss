@@ -1,0 +1,49 @@
+.sidebar{
+  float:right;
+  overflow: hidden;
+  width: 300px;
+  margin-top: 10px;
+  //form newsletter
+  .widget_text{
+    padding: 15px;
+    border-bottom: 4px solid #e2e2e2;
+    .widget-title{
+      margin-bottom: 20px;
+      color: #222;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+    input{
+      width: 100%;
+      height: 35px;
+      margin-bottom: 7px;
+      padding: 10px;
+      background-color: #e2e2e2;
+      border: 1px solid #b7b7b7;
+      box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.06);
+      color: #7f7c7c;
+      font-family: Arial;
+      font-size: 14px;
+    }
+    button{
+      width: 157px;
+      height: 35px;
+      border:none;
+      color: #2c2c2b;
+      font-weight: 300;
+      text-transform: uppercase;
+      transition: 0.5s;
+      &:hover{
+        opacity: 0.7;
+      }
+      .fa{
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 20px;
+        color: #2c2c2b;
+      }
+    }
+  }
+}
