@@ -36,6 +36,9 @@
         <?php endif; ?>
     </section>
     </main>
+
+    <?php get_sidebar(); ?>
+
 </div>
 
 <?php get_footer(); ?>

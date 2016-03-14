@@ -94,7 +94,10 @@ function blog_customize_css()
 {
     ?>
     <style type="text/css">
-        .header-nav, .excerpt-link, .widget_text button { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
+        .header-nav,
+        .excerpt-link,
+        .widget_text button,
+        #recent-posts-3 ul li a:hover { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
         .main-content .slider .description-block {border-top-color:<?php echo get_theme_mod('theme_color', '#000000'); ?>;}
     </style>
     <?php
