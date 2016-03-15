@@ -498,16 +498,26 @@ header .header-nav li.current-menu-item a {
 .sidebar #categories-3 ul li {
   display: block;
   margin-bottom: 5px;
+  padding: 10px 5px;
   background-color: #454545;
 }
-/* line 117, sass/site-parts/_main-sidebar.scss */
+/* line 118, sass/site-parts/_main-sidebar.scss */
 .sidebar #categories-3 ul li a {
   display: inline-block;
   height: 100%;
-  padding: 10px;
   color: #b6b6b6;
   font-family: Arial;
   transition: 0.5s;
+}
+/* line 125, sass/site-parts/_main-sidebar.scss */
+.sidebar #categories-3 ul li span {
+  clear: both;
+  float: right;
+  padding: 5px 15px;
+  color: #342f2f;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /* line 1, sass/layout/_footer.scss */

@@ -113,14 +113,23 @@
       li{
         display:block;
         margin-bottom: 5px;
+        padding: 10px 5px;
         background-color: #454545;
         a{
           display: inline-block;
           height: 100%;
-          padding: 10px;
           color: #b6b6b6;
           font-family: Arial;
           transition: 0.5s;
+        }
+        span{
+          clear: both;
+          float:right;
+          padding: 5px 15px;
+          color: #342f2f;
+          font-family: Arial;
+          font-size: 12px;
+          font-weight: 700;
         }
       }
     }

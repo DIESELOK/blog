@@ -97,7 +97,9 @@ function blog_customize_css()
         .header-nav,
         .excerpt-link,
         .widget_text button,
-        #recent-posts-3 ul li a:hover { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
+        #recent-posts-3 ul li a:hover,
+        .count,
+        #categories-3 ul li:hover { background:<?php echo get_theme_mod('theme_color', '#000000'); ?>; }
         .main-content .slider .description-block {border-top-color:<?php echo get_theme_mod('theme_color', '#000000'); ?>;}
     </style>
     <?php
@@ -143,3 +145,11 @@ function ourWidgetsInit() {
     ));
 }
 add_action('widgets_init', 'ourWidgetsInit');
+
+// Category count in <span>
+function add_span_cat_count($links) {
+    $links = str_replace('</a> (', '</a> <span class="count">(', $links);
+    $links = str_replace(')', ')</span>', $links);
+    return $links;
+}
+add_filter('wp_list_categories', 'add_span_cat_count');
